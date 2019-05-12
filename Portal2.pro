@@ -38,7 +38,11 @@ SOURCES += \
     addteacherdialog.cpp \
     showteacherdialog.cpp \
     removeteacherdialog.cpp \
-    editteacherdialog.cpp
+    editteacherdialog.cpp \
+    teachermaindialog.cpp \
+    teacherchangepassword.cpp \
+    show_student_lesson.cpp \
+    sendjozve.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -53,7 +57,11 @@ HEADERS += \
     addteacherdialog.h \
     showteacherdialog.h \
     removeteacherdialog.h \
-    editteacherdialog.h
+    editteacherdialog.h \
+    teachermaindialog.h \
+    teacherchangepassword.h \
+    show_student_lesson.h \
+    sendjozve.h
 
 FORMS += \
         mainwindow.ui \
@@ -68,7 +76,11 @@ FORMS += \
     addteacherdialog.ui \
     showteacherdialog.ui \
     removeteacherdialog.ui \
-    editteacherdialog.ui
+    editteacherdialog.ui \
+    teachermaindialog.ui \
+    teacherchangepassword.ui \
+    show_student_lesson.ui \
+    sendjozve.ui
 Employee += \
         addstudentdialog.ui
 

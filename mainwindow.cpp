@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <employeemaindialog.h>
+#include <teachermaindialog.h>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -57,9 +58,13 @@ void MainWindow::on_pushButton_teacher_clicked()
                 qry.bindValue(":teachercode", strUsername);
                 qry.exec();
     if(qry.next()){
-        qDebug() << "Teacher is OK too";
+        if(strPassword == qry.value(0).toString()){
+            teamaindialog = new teachermaindialog(this);
+            teamaindialog->show();
+        }
+
     }else{
-        qDebug() <<"Teacher has problem :(";
+        QMessageBox::warning(this, "warning", "رمز عبور وارد شده صحیح نمیباشد.");
     }
 }
 

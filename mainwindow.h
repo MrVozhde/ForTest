@@ -8,6 +8,7 @@
 #include <QDebug>
 #include <employeemaindialog.h>
 #include <employeechangepassworddialog.h>
+#include <teachermaindialog.h>
 
 namespace Ui {
 class MainWindow;
@@ -32,5 +33,6 @@ private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
     EmployeeMainDialog *emploMainDialog;
+    teachermaindialog *teamaindialog ;
 };
 #endif // MAINWINDOW_H
