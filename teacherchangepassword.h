@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QMessageBox>
+#include <QtSql>
 
 namespace Ui {
 class teacherchangepassword;
@@ -13,6 +14,8 @@ class teacherchangepassword : public QDialog
     Q_OBJECT
 
 public:
+    static QString username ;
+
     explicit teacherchangepassword(QWidget *parent = nullptr);
     ~teacherchangepassword();
 

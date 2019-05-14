@@ -42,7 +42,8 @@ SOURCES += \
     teachermaindialog.cpp \
     teacherchangepassword.cpp \
     show_student_lesson.cpp \
-    sendjozve.cpp
+    sendjozve.cpp \
+    studentmaindialog.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -61,7 +62,8 @@ HEADERS += \
     teachermaindialog.h \
     teacherchangepassword.h \
     show_student_lesson.h \
-    sendjozve.h
+    sendjozve.h \
+    studentmaindialog.h
 
 FORMS += \
         mainwindow.ui \
@@ -80,7 +82,8 @@ FORMS += \
     teachermaindialog.ui \
     teacherchangepassword.ui \
     show_student_lesson.ui \
-    sendjozve.ui
+    sendjozve.ui \
+    studentmaindialog.ui
 Employee += \
         addstudentdialog.ui
 

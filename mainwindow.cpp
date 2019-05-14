@@ -22,13 +22,14 @@ MainWindow::~MainWindow()
 }
 
 QString EmployeeChangePasswordDialog::strUser;
+QString teacherchangepassword::username ;
 
 void MainWindow::on_pushButton_manager_clicked()
 {
     QString strUsername = ui->lineEdit_username->text() ;
     QString strPassword = ui->lineEdit_password->text();
 
-    EmployeeChangePasswordDialog::strUser = strUsername;
+
 
     QSqlQuery qry;
 
@@ -38,6 +39,7 @@ void MainWindow::on_pushButton_manager_clicked()
                 qry.exec();
     if(qry.next()){
         if(strPassword == qry.value(0).toString()){
+            EmployeeChangePasswordDialog::strUser = strUsername;
             emploMainDialog = new EmployeeMainDialog(this);
             emploMainDialog->show();
         }
@@ -51,6 +53,7 @@ void MainWindow::on_pushButton_teacher_clicked()
     QString strUsername = ui->lineEdit_username->text();
     QString strPassword = ui->lineEdit_password->text();
 
+
     QSqlQuery qry;
 
     qry.prepare("Select Password From Student.dbo.tblTeacher \
@@ -59,6 +62,7 @@ void MainWindow::on_pushButton_teacher_clicked()
                 qry.exec();
     if(qry.next()){
         if(strPassword == qry.value(0).toString()){
+            teacherchangepassword::username = strUsername;
             teamaindialog = new teachermaindialog(this);
             teamaindialog->show();
         }
@@ -80,8 +84,9 @@ void MainWindow::on_pushButton_stu_clicked()
                 qry.bindValue(":stucode", strUsername);
                 qry.exec();
     if(qry.next()){
-        qDebug() << "Student is also OK :D";
+        stumaindialog = new studentmaindialog(this);
+        stumaindialog->show();
     }else{
-        qDebug() <<"Student has problem :(";
+        QMessageBox::warning(this, "warning", "رمز عبور وارد شده صحیح نمیباشد.");
     }
 }

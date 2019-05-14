@@ -2,6 +2,7 @@
 #define SHOW_STUDENT_LESSON_H
 
 #include <QDialog>
+#include <QtSql>
 
 namespace Ui {
 class show_student_lesson;
@@ -17,6 +18,7 @@ public:
 
 private:
     Ui::show_student_lesson *ui;
+
 };
 
 #endif // SHOW_STUDENT_LESSON_H

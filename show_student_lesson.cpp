@@ -6,6 +6,7 @@ show_student_lesson::show_student_lesson(QWidget *parent) :
     ui(new Ui::show_student_lesson)
 {
     ui->setupUi(this);
+
 }
 
 show_student_lesson::~show_student_lesson()

@@ -15,6 +15,8 @@ class teachermaindialog : public QDialog
     Q_OBJECT
 
 public:
+
+
     explicit teachermaindialog(QWidget *parent = nullptr);
     ~teachermaindialog();
 

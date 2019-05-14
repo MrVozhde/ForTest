@@ -9,6 +9,7 @@
 #include <employeemaindialog.h>
 #include <employeechangepassworddialog.h>
 #include <teachermaindialog.h>
+#include <studentmaindialog.h>
 
 namespace Ui {
 class MainWindow;
@@ -34,5 +35,6 @@ private:
     QSqlDatabase db;
     EmployeeMainDialog *emploMainDialog;
     teachermaindialog *teamaindialog ;
+    studentmaindialog *stumaindialog ;
 };
 #endif // MAINWINDOW_H
